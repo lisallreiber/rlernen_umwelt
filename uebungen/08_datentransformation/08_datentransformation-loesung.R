@@ -46,7 +46,7 @@ pivot_audit <- audit %>%
   
 ### Übung 1.2: Pivoting des Datensatzes ----------------------------------------
 # nachdem wir nun die Top 10 der müllproduzierenden Firmen extrahiert haben, können wir mit den gefilterten Daten weitermachen.
-
+pivot_audit %>%
 # Die gefilterten Daten müsst Ihr erneut nach Land ("country") und Mutterkonzern ("parent_company") filtern. Diese Gruppierung ist notwendig, um die Summe der Plastikteile für jede Kombination aus Land und Firma zu berechnen.
   dplyr::group_by(country, parent_company) %>%
   
@@ -61,7 +61,7 @@ pivot_audit <- audit %>%
   # "values_fill = 0" füllt fehlende Werte mit 0, falls es keine Plastikteile für eine Firma in einem bestimmten Land gibt.
 
 # Zum Abschluss zeigt Ihr die neue Tabelle in einer Ansicht an, um das Ergebnis zu überprüfen.
-view(pivot_audit)
+View(pivot_audit)
 
 
 ## Übung 2: Joining von Datensätzen --------------------------------------------
